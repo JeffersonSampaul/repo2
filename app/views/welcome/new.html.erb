@@ -1,0 +1,30 @@
+<%= form_for :welcome do |f| %>
+  <div style = "display:inline-block">
+    <%= f.label :Manufacturers %>
+    <%= f.select(:manufacturer, options_for_select(["Hyundai", "Maruthi", "Toyato"]), include_blank: true ) %>
+  </div></br></br>
+  <div style = "display:inline-block">
+    <%= f.label :Manufacturers %>
+    <%= f.select(:manufacturer, options_for_select(["Hyundai", "Maruthi", "Toyato"], "Maruthi"), include_blank: true ) %>
+  </div></br></br>
+  <div style = "display:inline-block">
+    <%= f.label :Manufacturers %>
+    <%= f.select(:manufacturer, options_for_select(["Hyundai", "Maruthi", "Toyato"]), prompt: "select" ) %>
+  </div></br></br>
+  <div style = "display:inline-block">
+    <%= f.label :Manufacturers %>
+    <%= f.select(:manufacturer, options_for_select(["Hyundai", "Maruthi", "Toyato"]), include_blank: true, prompt: "select" ) %>
+  </div></br></br>
+  <div style = "display:inline-block">
+    <%= f.label :Manufacturers %>
+    <%= f.select(:manufacturer, options_for_select(["Hyundai", "Maruthi", "Toyato"]), {prompt: "select"}, {multiple: true} ) %>
+  </div></br></br>
+  <!--div style = "display:inline-block">
+    <%#= f.label :Manufacturers %>
+    <%#= f.select(:manufacturer, Manufacturer.pluck(:name, :id), {prompt: "select"}, {multiple: true} ) %>
+  </div></br></br-->
+<% end %>
+  <div style = "display:inline-block">
+    <%= label_tag :Manufacturers %>
+    <%= select_tag :manufacturer, options_for_select(["Hyundai", "Maruthi", "Toyato"], "Maruthi"), include_blank: true %>
+  </div></br></br>
